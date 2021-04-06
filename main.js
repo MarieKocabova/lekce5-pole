@@ -6,22 +6,24 @@
 // Úkol 1 - Založ nové pole se seznamem jmen (alespoň 5)
 // Vypiš jeho obsah do stránky - JavaScript spojí pole automaticky do řetězce
 
-
+let pole = ['Filip', 'Denisa', 'Lucie', 'Karolína', 'Katka'];
+let vypisPole = document.querySelector('#vystup');
+vypisPole.innerHTML = pole;
 
 
 
 // Úkol 2 - Vypiš třetí jméno v pořadí
 // Nezapomeň, že pole se čísluje od 0
 
-
-
+let tretiVPoradi = pole[2];
+console.log(tretiVPoradi);
 
 
 
 // Úkol 3 - Kolik jmen je v poli?
 // Pole má vlastnost pole.length
 
-
+console.log(pole.length);
 
 
 
@@ -33,14 +35,22 @@
 // 2. Marie
 // atd.
 
+pole.forEach(function(element, index) {
+    console.log(index + '. ' + element)
+});
+
 
 
 
 
 // Úkol 5 - přidej na konec pole další jméno
-// pole.push()
-// pole.unshift()
+ pole.push('Libuše');
+ console.log(pole);
+
+ pole.unshift('Dominika')
+ console.log(pole);
 // Doplněný seznam jmen vypiš (jednoduše jako v příkladu 1)
+vypisPole.innerHTML = pole;
 
 
 
@@ -48,8 +58,13 @@
 
 // Úkol 6 - odeber z pole první a poslední jméno a vypiš
 // obě jména a pak i výsledné pole
-// pole.shift()
-// pole.pop()
+console.log(pole[0])
+pole.shift(pole[0])
+
+console.log(pole[pole.length -1])
+pole.pop(pole[pole.length -1])
+ 
+console.log(pole);
 
 
 
